@@ -1,26 +1,9 @@
 import { Button } from "@/components/ui/button"
+import OverlayIcon from "./assets/navicons/overlay.svg?react"
+import ControllerIcon from "./assets/navicons/controller.svg?react"
+import IngameIcon from "./assets/navicons/ingame.svg?react"
 
-// function ArrowRightIcon(props: any) {
-//   return (
-//     <svg
-//       {...props}
-//       xmlns="http://www.w3.org/2000/svg"
-//       width="24"
-//       height="24"
-//       viewBox="0 0 24 24"
-//       fill="none"
-//       stroke="currentColor"
-//       strokeWidth="2"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//     >
-//       <path d="M5 12h14" />
-//       <path d="m12 5 7 7-7 7" />
-//     </svg>
-//   )
-// }
-
-function OverlayButton({ name }: { name: string }, { iconPath }: { iconPath: string }) {
+function NavButton({ name, icon: Icon }: { name: string, icon: React.ElementType }) {
   return (
     <Button className="
       w-[400px]
@@ -31,6 +14,9 @@ function OverlayButton({ name }: { name: string }, { iconPath }: { iconPath: str
       active:bg-gray-200
       hover:bg-white
       hover:text-black
+      hover:border-solid
+      hover:border-4
+      hover:border-black
       transform active:scale-90
       select-none
       outline-none
@@ -40,7 +26,7 @@ function OverlayButton({ name }: { name: string }, { iconPath }: { iconPath: str
       duration-150
       ease-in-out
       ">
-      <Icon path={ iconPath } />
+       <Icon className="w-48 h-48" />
       <p className="text-4xl">{ name }</p>
     </Button>
   )
@@ -49,10 +35,9 @@ function OverlayButton({ name }: { name: string }, { iconPath }: { iconPath: str
 export default function App() {
   return (
     <div className="h-screen w-screen flex flex-row justify-center items-center space-x-20">
-        <OverlayButton name="Overlay" />
-        <OverlayButton name="Controller" />
-        <OverlayButton name="In-game" />
+        <NavButton name="Overlay" icon={OverlayIcon} />
+        <NavButton name="Controller" icon={ControllerIcon} />
+        <NavButton name="In-game" icon={IngameIcon} />
     </div>
   )
 }
-

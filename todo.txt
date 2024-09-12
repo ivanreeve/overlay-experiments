@@ -1,0 +1,6 @@
+[] connect buttons to routers
+[] work on controller ui
+[] work on overlay
+[] ingame ui, probably nope
+
+[] try daisyui (not a related task)
