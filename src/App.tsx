@@ -1,13 +1,13 @@
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
+} from "react-router-dom"
 
 import MinimalLayout from "./layouts/MinimalLayout"
 import NavigationPanel from "./pages/NavigationPanel"
-import Controller from "./pages/Controller";
-import Overlay from "./pages/Overlay";
-import Ingame from "./pages/Ingame";
+import Controller from "./pages/Controller"
+import Overlay from "./pages/Overlay"
+import Ingame from "./pages/Ingame"
 
 const router = createBrowserRouter([
   {
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       }
     ]
   },
-]);
+])
 
 function App() {
   return (

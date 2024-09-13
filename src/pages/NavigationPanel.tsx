@@ -9,7 +9,7 @@ import IngameIcon from "../assets/nav-icons/ingame.svg?react"
 function NavigationButton({ name, routePath, icon: Icon }: { name: string, routePath: string, icon: React.ElementType }) {
   const navigate = useNavigate()
 
-  const sendRoute = () => {
+  const gotoRoute = () => {
     navigate(routePath)
   }
 
@@ -35,7 +35,7 @@ function NavigationButton({ name, routePath, icon: Icon }: { name: string, route
       duration-150
       ease-in-out
       "
-      onClick={sendRoute}>
+      onClick={gotoRoute}>
       <Icon className="w-48 h-48" />
       <p className="text-4xl">{ name }</p>
     </Button>
@@ -69,5 +69,5 @@ export default function NavigationPanel() {
           icon={IngameIcon} 
         />
     </div>
-  );
+  )
 }
