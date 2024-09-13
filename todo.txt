@@ -1,4 +1,4 @@
-[] connect buttons to routers
+[/] connect buttons to routers
 [] work on controller ui
 [] work on overlay
 [] ingame ui, probably nope
